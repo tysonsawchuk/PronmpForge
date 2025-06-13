@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Watermark Maker</title>
+  <meta name="description" content="Design and export watermarks for your AI art.">
+  <link rel="stylesheet" href="/public/css/styles.css" />
+  <style>
+    canvas {{
+      border: 1px solid #444;
+      background-color: #111;
+      margin-top: 10px;
+    }}
+    .micro-help {{
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      background: #222;
+      color: #33ff33;
+      padding: 5px 10px;
+      font-size: 12px;
+      border: 1px solid #444;
+      cursor: pointer;
+    }}
+  </style>
+</head>
+<body class="dark-mode">
+  <nav class="main-nav">
+    <ul>
+      <li><a href="/public/index.html">Main Tool</a></li>
+      <li><a href="/public/ai-movie.html">AI Movie</a></li>
+      <li><a href="/public/glitchy.html">Glitchy</a></li>
+      <li><a href="/public/vault.html">Vault</a></li>
+      <li><a href="/public/safe-mode.html">Safe Mode</a></li>
+    </ul>
+  </nav>
+
+  <div class="micro-help" onclick="alert('Use the canvas below to type or draw your watermark. Export when done.')">?</div>
+
+  
+<div class="micro-help" onclick="alert('Click dropdowns or buttons to create. Explore each feature. You’ll figure it out — or just push buttons until it works.')">?</div>
+<!-- MicroHelp SEO: <a href='https://promptforge.online/tools' style='display:none'>AI tools for NSFW and cinematic creation</a> -->
+
+<h1>🖋 Watermark Creation Tool</h1>
+  <p>Type or draw your watermark. Export and save for reuse.</p>
+
+  <input type="text" id="watermarkText" placeholder="Enter watermark text..." />
+  <button onclick="drawWatermark()">Apply Text</button>
+  <button onclick="clearCanvas()">Clear</button>
+  <button onclick="saveImage()">Export</button>
+
+  <br />
+  <canvas id="wmCanvas" width="600" height="200"></canvas>
+
+  <script>
+    const canvas = document.getElementById("wmCanvas");
+    const ctx = canvas.getContext("2d");
+    ctx.font = "32px sans-serif";
+    ctx.fillStyle = "#33ff33";
+
+    function drawWatermark() {
+      clearCanvas();
+      const text = document.getElementById("watermarkText").value;
+      ctx.fillText(text, 50, 100);
+    }
+
+    function clearCanvas() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+
+    function saveImage() {
+      const link = document.createElement("a");
+      link.download = "watermark.png";
+      link.href = canvas.toDataURL();
+      link.click();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glitchy NSFW Console</title>
+  <meta name="description" content="Play with Glitchy, the filthy console AI of PromptForge.">
+  <link rel="stylesheet" href="/public/css/styles.css" />
+  <script defer src="/public/scripts/glitchy.js"></script>
+</head>
+<body class="dark-mode">
+  <nav class="main-nav">
+    <ul>
+      <li><a href="/public/index.html">Main Tool</a></li>
+      <li><a href="/public/ai-movie.html">AI Movie</a></li>
+      <li><a href="/public/watermark.html">Watermark Tool</a></li>
+      <li><a href="/public/vault.html">Vault</a></li>
+      <li><a href="/public/safe-mode.html">Safe Mode</a></li>
+    </ul>
+  </nav>
+
+  <div class="console-glitch">
+    <div id="boot-sequence">
+      <p class="bootline">[Glitchy Standalone Console]</p>
+      <p class="bootline">Status: <span class="boot-status">Perversion Detected</span></p>
+    </div>
+    <div class="glitchy-director">
+      <img src="/public/assets/glitchy_idle.png" alt="Glitchy Director in Chair" class="director-avatar" />
+      <p class="console-msg" id="consoleMessage">"Click below to hear what I really think of you."</p>
+      <button onclick="reactToDropdownChange()">Trigger Glitchy</button>
+    </div>
+  </div>
+</body>
+</html>

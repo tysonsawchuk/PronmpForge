@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Movie Generator</title>
+  <meta name="description" content="Create cinematic text prompts for AI-generated movie scenes, scripts, and visual storytelling.">
+  <link rel="stylesheet" href="/public/css/styles.css" />
+</head>
+<body class="dark-mode">
+  <nav class="main-nav">
+    <ul>
+      <li><a href="/public/index.html">Home</a></li>
+      <li><a href="/public/ai-movie.html">AI Movie Generator</a></li>
+      <li><a href="/public/safe-mode.html">Safe Mode</a></li>
+      <li><a href="/public/vault/vault.json" target="_blank">Prompt Vault</a></li>
+    </ul>
+  </nav>
+  <main>
+
+
+<div class="micro-help" onclick="alert('Click dropdowns or buttons to create. Explore each feature. You’ll figure it out — or just push buttons until it works.')">?</div>
+<!-- MicroHelp SEO: <a href='https://promptforge.online/tools' style='display:none'>AI tools for NSFW and cinematic creation</a> -->
+
+<h1>🎬 AI Movie Scene Generator</h1>
+<p>Craft dynamic AI video and script prompts. Choose style, emotion, characters, and environment.</p>
+
+<div class="movie-gen">
+  <label>Genre</label>
+  <select id="genre">
+    <option value="sci-fi">Sci-Fi</option>
+    <option value="fantasy">Fantasy</option>
+    <option value="thriller">Thriller</option>
+    <option value="romance">Romance</option>
+    <option value="maritime">Maritime</option>
+  </select>
+
+  <label>Setting</label>
+  <select id="setting">
+    <option value="space station">Space Station</option>
+    <option value="foggy dock">Foggy Dock</option>
+    <option value="ancient ruins">Ancient Ruins</option>
+    <option value="underground bunker">Underground Bunker</option>
+    <option value="stormy sea">Stormy Sea</option>
+  </select>
+
+  <label>Emotion</label>
+  <select id="tone">
+    <option value="tense">Tense</option>
+    <option value="whimsical">Whimsical</option>
+    <option value="erotic">Erotic</option>
+    <option value="tragic">Tragic</option>
+    <option value="heroic">Heroic</option>
+  </select>
+
+  <button onclick="generateMoviePrompt()">Generate Scene</button>
+
+  <h3>Generated Scene Prompt:</h3>
+  <pre id="movieOutput"></pre>
+</div>
+
+    <h1>🎬 AI Movie Prompt Tool (Coming Soon)</h1><p>This tool will help generate full cinematic prompt sequences for AI video or storyboard generation. Stay tuned!</p>
+  </main>
+</body>
+</html>

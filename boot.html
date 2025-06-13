@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PromptForge Boot</title>
+  <meta name="description" content="Booting up the forbidden PromptForge system. Initiating NSFW core...">
+  <link rel="stylesheet" href="/public/css/styles.css" />
+  <style>
+    body {{
+      background-color: black;
+      color: #33ff33;
+      font-family: monospace;
+      padding: 20px;
+      animation: fadeIn 3s ease-in-out;
+    }}
+    .boot-screen {{
+      max-width: 600px;
+      margin: 100px auto;
+      text-align: center;
+      animation: glitch 1s infinite;
+    }}
+    @keyframes fadeIn {{
+      from {{ opacity: 0; }}
+      to {{ opacity: 1; }}
+    }}
+    @keyframes glitch {{
+      0% {{ text-shadow: 2px 2px red; }}
+      50% {{ text-shadow: -2px -2px blue; }}
+      100% {{ text-shadow: 2px -2px lime; }}
+    }}
+  </style>
+  <script>
+    setTimeout(function() {{
+      window.location.href = "/public/index.html";
+    }}, 6000);
+  </script>
+</head>
+<body>
+  <div class="boot-screen">
+    <h1>[ SYSTEM INITIALIZING... ]</h1>
+    <p>PromptForge MONSTER vX.X</p>
+    <p>Loading forbidden subsystems...</p>
+    <p>Decrypting vault access...</p>
+    <p><strong>✓ Glitchy Core Detected</strong></p>
+    <p><strong>✓ NSFW Engine Online</strong></p>
+    <p>Launching main interface...</p>
+  </div>
+</body>
+</html>

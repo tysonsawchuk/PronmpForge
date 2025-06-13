@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PromptForge MONSTER</title>
+  <link rel="stylesheet" href="/public/css/styles.css" />
+  <script defer src="/public/scripts/main.js"></script>
+  <script defer src="/public/scripts/boot.js"></script>
+  <script defer src="/public/scripts/glitchy.js"></script>
+</head>
+<body class="dark-mode">
+
+<nav class="main-nav">
+  <ul>
+    <li><a href="/public/index.html">Home</a></li>
+    <li><a href="/public/ai-movie.html">AI Movie Generator</a></li>
+    <li><a href="/public/safe-mode.html">Safe Mode</a></li>
+    <li><a href="/public/vault/vault.json" target="_blank">Prompt Vault</a></li>
+  </ul>
+</nav>
+
+
+  <div class="console-glitch">
+    <div id="boot-sequence">
+      <p class="bootline">[Glitchy Booting Up...]</p>
+      <p class="bootline">Status: <span class="boot-status">NSFW Systems Online</span></p>
+    </div>
+    <div class="glitchy-director">
+      <img src="/public/assets/glitchy_idle.png" alt="Glitchy Director in Chair" class="director-avatar" />
+      <p class="console-msg">"Yeah, you can swear. You can be nasty. I *run* this freakshow. Now generate something worth hiding from your parents."</p>
+    </div>
+  </div>
+
+  <div class="promptforge-container">
+    <div class="dropdowns">
+      <label>Age</label>
+      <select id="age">
+        <option value="">--</option>
+<option value="18">18</option>
+<option value="20">20</option>
+<option value="22">22</option>
+<option value="24">24</option>
+<option value="26">26</option>
+<option value="28">28</option>
+<option value="30">30</option>
+<option value="32">32</option>
+<option value="34">34</option>
+<option value="36">36</option>
+<option value="38">38</option>
+<option value="40">40</option>
+<option value="42">42</option>
+<option value="44">44</option>
+<option value="46">46</option>
+<option value="48">48</option>
+<option value="50">50</option>
+<option value="52">52</option>
+<option value="54">54</option>
+<option value="56">56</option>
+<option value="58">58</option>
+<option value="60">60</option>
+<option value="62">62</option>
+<option value="64">64</option>
+<option value="66">66</option>
+      </select>
+
+      <label>Group</label>
+      <select id="group">
+        <option value="gg">gg</option>
+        <option value="bg">bg</option>
+        <option value="bb">bb</option>
+      </select>
+
+      <label>Sex Act</label>
+      <select id="sex">
+        <option value="f🩷cking">f🩷cking</option>
+        <option value="s🩷cking">s🩷cking</option>
+        <option value="m🩷uthplay">m🩷uthplay</option>
+      </select>
+
+      <label>Emotion</label>
+      <select id="emotion">
+        <option value="feral">feral</option>
+        <option value="needy">needy</option>
+        <option value="playful">playful</option>
+      </select>
+
+      <label>Face</label>
+      <select id="face">
+        <option value="innocent">innocent</option>
+        <option value="naughty">naughty</option>
+        <option value="seductive">seductive</option>
+      </select>
+    </div>
+
+    <div class="buttons">
+      <button onclick="generatePrompt()">GENERATE</button>
+      <button onclick="regeneratePrompt()">REGENERATE</button>
+      <button onclick="copyPrompt()">COPY</button>
+    </div>
+
+    <div class="output">
+      <h3>Raw Output:</h3>
+      <pre id="rawOutput"></pre>
+      <h3>Generated Prompt:</h3>
+      <pre id="finalPrompt"></pre>
+    </div>
+  </div>
+
+</body>
+</html>
